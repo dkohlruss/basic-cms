@@ -20,6 +20,8 @@ try {
   $message = $e;
 }
 
+$_SESSION['message'] = $message;
+header('Location: ./index.php');
 mysqli_close($link);
 
  ?>
