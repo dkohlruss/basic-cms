@@ -17,6 +17,7 @@ if (isset($_SESSION['message'])) {
     <div class="content">
         <fieldset>
             <form action="loginSubmit.php" method="POST">
+                <h3>Please login to continue</h3>
                 <p>
                     <label>Username: </label>
                     <input type="text" name="username" maxlength="20" />
