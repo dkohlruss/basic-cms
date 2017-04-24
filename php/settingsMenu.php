@@ -1,7 +1,8 @@
-<?php 
+<?php
 
 require('session.php');
 require('SQLFunctions.php');
+session_start();
 
 $link = connectDB();
 $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
@@ -27,9 +28,9 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
                             <div class="text_value"><input type="text" name="ShortTextValue" value="<?= $row['ShortTextValue']; ?>" /></div>
                             <div class="modify"><input type="submit" value="Edit" /></form> <br>
                             <form action='settingsMenuDelete.php' method = 'POST' /> <input type='hidden' name='q' value="<?= $row['SiteConfig_ID']; ?>" /><input type='Submit' value='Delete'></form>
-                            </div>    
+                            </div>
                     </div>
-                    <?php 
+                    <?php
                 }
             }
         ?>
@@ -40,7 +41,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
             <input type="text" name="ConfigName" />
             <input type="text" name="ShortTextValue" />
             <input type="submit" value="Create" />
-            
+
         </form>
     </div>
   </body>
