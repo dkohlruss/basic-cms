@@ -21,7 +21,7 @@ try {
 }
 
 $_SESSION['message'] = $message;
-header('Location: ./index.php');
+header('Location: ./settingsMenu.php');
 mysqli_close($link);
 
  ?>
