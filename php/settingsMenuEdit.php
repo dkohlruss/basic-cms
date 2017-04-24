@@ -9,7 +9,7 @@ $value = $_POST['ShortTextValue'];
 
 try {
   $link = connectDB();
-  $sql = "UPDATE SitConfig SET ShortTextValue = '" . $value . "' WHERE SiteConfig_ID = " . $id . ";";
+  $sql = "UPDATE SiteConfig SET ShortTextValue = '" . $value . "' WHERE SiteConfig_ID = " . $id . ";";
 
   if (mysqli_query($link,$sql)) {
     $message = "Record updated successfully";
