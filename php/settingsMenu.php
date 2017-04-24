@@ -24,7 +24,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
                     <div class="config_entry" id="<?= $row['SiteConfig_ID']; ?>">
                         <form action="settingsMenuEdit.php" method="POST">
                             <input type='hidden' name='q' value="<?= $row['SiteConfig_ID']; ?>" />
-                            <div class="config_name"><input type="text" name="ConfigName" value="<?= $row['ConfigName']; ?>" /></div>
+                            <div class="config_name"><?= $row['ConfigName']; ?></div>
                             <div class="text_value"><input type="text" name="ShortTextValue" value="<?= $row['ShortTextValue']; ?>" /></div>
                             <div class="modify"><input type="submit" value="Edit" /></form> <br>
                             <form action='settingsMenuDelete.php' method = 'POST' /> <input type='hidden' name='q' value="<?= $row['SiteConfig_ID']; ?>" /><input type='Submit' value='Delete'></form>
