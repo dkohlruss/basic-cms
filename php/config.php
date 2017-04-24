@@ -1,6 +1,9 @@
 <?php
-define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net'); /*Database Server*/
-define('DB_NAME', 'heroku_ad9bf0e402e85c2'); /*Database Name*/
-define('DB_USER', 'b29d7d77ba8fa8'); /*Database Username*/
-define('DB_PWD',  'd8664449'); /*Database Password*/
+
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+define('DB_HOST', substr($url["path"], 1)); /*Database Server*/
+define('DB_NAME', 'heroku_c0930732318d46a'); /*Database Name*/
+define('DB_USER', $url["user"]); /*Database Username*/
+define('DB_PWD',  $url["pass"]); /*Database Password*/
 ?>
