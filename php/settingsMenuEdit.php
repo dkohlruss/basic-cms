@@ -12,7 +12,7 @@ try {
   $sql = "UPDATE SiteConfig SET ShortTextValue = '" . $value . "' WHERE SiteConfig_ID = " . $id . ";";
 
   if (mysqli_query($link,$sql)) {
-    $message = "Record updated successfully";
+    $message = "Record " . $id . "updated successfully";
   }
 
 
