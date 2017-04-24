@@ -40,13 +40,25 @@ if (!isset($_POST['username'], $_POST['pwd'])) {
           }
       }
     }
-    
-    
+
+
   } catch(Exception $e) {
+    echo "ERROR!";
     echo $e;
   }
-
+  header('Refresh: 2; URL=./index.php');
   mysqli_close($link);
+
 }
 
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LoginSubmit</title>
+    </head>
+    <body>
+        <p><?php echo $message; ?></p>
+    </body>
+</html>
