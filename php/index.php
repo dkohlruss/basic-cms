@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require('session.php');
 
@@ -12,7 +12,7 @@ require('session.php');
   <body>
     <h1>Simple CMS</h1>
     <div class="row">
-        <div class="content"><a href="#">Settings</a></div>
+        <div class="content"><a href="./settingsMenu.php">Settings</a></div>
         <div class="content"><a href="#">Content</a></div>
     </div>
   </body>
