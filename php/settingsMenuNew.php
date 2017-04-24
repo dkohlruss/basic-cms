@@ -1,6 +1,7 @@
 <?php
 
 require('SQLFunctions.php');
+require('session.php');
 session_start();
 
 $name = $_POST['ConfigName'];

@@ -2,6 +2,7 @@
 
 
 require('SQLFunctions.php');
+require('session.php');
 session_start();
 
 $id = $_POST['q'];
