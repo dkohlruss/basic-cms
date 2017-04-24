@@ -1,19 +1,13 @@
 <?php
 
 session_start();
+if (isset($_SESSION['message'])) {
+    echo "<h3>" . $_SESSION['message'] . "</h3>";
+    unset($_SESSION['message']);
+}
 session_unset();
 session_destroy();
 
-header('Refresh: 2; URL=./index.php');
+header('Refresh: 1; URL=./index.php');
 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Logout</title>
-    </head>
-    <body>
-        <h1>You have logged out</h1>
-    </body>
-</html>

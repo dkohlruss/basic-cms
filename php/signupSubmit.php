@@ -36,20 +36,22 @@ if (!isset($_POST['username'], $_POST['pwd'])) {
           if (mysqli_query($link, $sql)) {
               $message = 'User Created!';
           } else {
-              echo "Error: " . $sql . "<br>" . $mysqli_error($link);
+              $message =  "Error: " . $sql . "<br>" . $mysqli_error($link);
           }
       }
     }
 
 
   } catch(Exception $e) {
-    echo "ERROR!";
-    echo $e;
+    $message = $e;
   }
-  header('Refresh: 2; URL=./index.php');
+
   mysqli_close($link);
 
 }
+
+$_SESSION['message'] = $message;
+header('Location: ./index.php');
 
 ?>
 

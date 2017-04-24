@@ -22,45 +22,31 @@ if (!isset($_POST['username'], $_POST['pwd'])) {
   $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
 
   $pwd = sha1($pwd);
-  
+
   try {
       $link = connectDB();
       $sql = "SELECT User_ID FROM User_Dfn WHERE username = '" . $username . "' AND pwd = '" . $pwd . "';";
-      
+
       if ($result = mysqli_query($link, $sql)) {
           while ($row = mysqli_fetch_assoc($result)) {
               $userid = $row['User_ID'];
               $_SESSION['User_ID'] = $userid;
               $_SESSION['timeout'] = time();
               $message = 'You are now logged in';
-              header('Refresh: 2; URL=./index.php');
+
           }
-      } 
-      
+      }
+
       if ($userid == false) {
           $message = 'Incorrect username or password';
-          header('Refresh: 2; URL=./index.php');
       }
-      
+
   } catch (Exception $e) {
       $message = $e;
   }
-  
 mysqli_close($link);
-  
-  
-  
 }
-
+$_SESSION['message'] = $message;
+header('Location: ./index.php');
 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>LoginSubmit</title>
-    </head>
-    <body>
-        <p><?php echo $message; ?></p>
-    </body>
-</html>
