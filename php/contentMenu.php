@@ -5,7 +5,7 @@ require('SQLFunctions.php');
 session_start();
 
 $link = connectDB();
-$sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order, Nav_Title";
+$sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order, Nav_Title;";
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
     <h1>Site Configuration</h1>
     <div class="content">
         <?php
+        try {
           if ($result = mysqli_query($link, $sql)) {
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
@@ -29,6 +30,9 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
             </form> <?php
           }
         }
+      } catch (Exception $e) {
+        echo $e;
+      }
  ?>
       </div>
     </body>
