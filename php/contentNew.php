@@ -15,7 +15,7 @@ require('SQLFunctions.php');
         <h3>Create New Content</h3>
         <form action="contentNewSubmit.php" method="POST">
             <input type="text" name="ContentTitle" />
-            <input type="text" name="Content" />
+            <input type="textarea" name="Content" />
             <input type="submit" value="Create" />
         </form>
     </div>
