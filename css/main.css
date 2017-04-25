@@ -191,6 +191,10 @@ section {
   text-align: left;
 }
 
+form {
+  display: inline-block;
+}
+
 .btn {
   display: inline-block;
   margin: 5px;

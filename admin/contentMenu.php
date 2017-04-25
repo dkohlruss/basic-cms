@@ -36,11 +36,11 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
                   <form action="contentEdit.php" method="POST">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
                     <input type="hidden" name="Display_Order" value="<?= $row['Display_Order'] ?>" />
-                    <button type="submit" value="Submit">Edit</button>
+                    <button type="submit" value="Submit" class="btn">Edit</button>
                   </form>
                   <form action="contentDelete.php" method="POST">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
-                    <button type="submit" value="Delete">Delete</button>
+                    <button type="submit" value="Delete" class="btn">Delete</button>
                   </form>
                 </td>
             </tr> <?php
