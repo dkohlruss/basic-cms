@@ -26,7 +26,7 @@ if ($result = mysqli_query($link,$sql)) {
       <nav class="navbar">
         <ul class="nav-list">
           <?php
-          $sql = "SELECT Nav_Title FROM Nav ORDER BY Display_Order";
+          $sql = "SELECT Nav_Title FROM Nav ORDER BY Display_Order ASC";
           if ($result = mysqli_query($link,$sql)) {
             while ($row = mysqli_fetch_assoc($result)) {
               $arr = explode(' ',trim($row['Nav_Title']));
@@ -47,7 +47,7 @@ if ($result = mysqli_query($link,$sql)) {
     </div>
     <section class="row">
       <?php
-      $sql = "SELECT ContentTitle, Content FROM Content ORDER BY Display_Order DESC";
+      $sql = "SELECT ContentTitle, Content FROM Content ORDER BY Display_Order ASC";
       if ($result = mysqli_query($link,$sql)) {
         while ($row = mysqli_fetch_assoc($result)) {
           $contentname = explode(' ',trim($row['ContentTitle']));
