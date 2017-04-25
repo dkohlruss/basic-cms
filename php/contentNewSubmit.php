@@ -27,7 +27,7 @@ try {
 try {
   $navsqlinsert = "INSERT INTO Nav (Nav_Title, Display_Order) VALUES ('" . $title . "','" . $order . "');";
   if (mysqli_query($link,$navsqlinsert)) {
-    $navsqlquery = "SELECT 1 FROM Nav ORDER BY Nav_ID DESC;";
+    $navsqlquery = "SELECT * FROM Nav ORDER BY Nav_ID DESC LIMIT 1;";
     if ($result = mysqli_query($link,$navsqlquery)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $navid = $row['Nav_ID'];
