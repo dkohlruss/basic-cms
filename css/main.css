@@ -159,7 +159,7 @@ section {
 
 .config_entry {
   display: block;
-  width: 500px;
+  width: 700px;
   margin: auto 1px;
   border: 1px solid black;
 }
@@ -172,13 +172,13 @@ section {
 
 .text_value {
   display: inline-block;
-  width: 300px;
+  width: 400px;
   border-right: 1px solid black;
 }
 
 .modify {
   display: inline-block;
-  width: 50px;
+  width: 100px;
 }
 
 @media screen and (max-width: 990px) {
