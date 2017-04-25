@@ -36,15 +36,10 @@ $id = $_SESSION['Nav_ID']
           }
         }
       } catch (Exception $e) {
-        $message = $e;
+        echo $e;
       }
 
       ?>
     </div>
   </body>
 </html>
-
-<?php
-$_SESSION['message'] = $message;
-mysqli_close($link);
-?>
