@@ -27,10 +27,11 @@ $displayorder = $_POST['Display_Order'];
             ?>
             <form action="contentEditUpdate.php" method="POST">
               <input type="hidden" name="Content_ID" value="<?= $id; ?>" />
-              Title: <input type="text" name="ContentTitle" value="<?= $row['ContentTitle'] ?>" /> <br>
-              Display Order: <input type="text" name="Display_Order" value=" <?= $displayorder; ?>" width="75" /> <br>
-              <textarea name="Content" cols="150" rows="20"><?= $row['Content'] ?></textarea>
-              <input type="submit" value="Update" />
+              <p>Title: <input type="text" name="ContentTitle" value="<?= $row['ContentTitle'] ?>" /> </p>
+              <p>Display Order: <input type="text" name="Display_Order" value=" <?= $displayorder; ?>" width="75" /> </p>
+              <p>Content: <br>
+                <textarea name="Content" cols="150" rows="20"><?= $row['Content'] ?></textarea></p>
+              <p><input type="submit" value="Update" /></p>
             </form>
             <?php
           }
