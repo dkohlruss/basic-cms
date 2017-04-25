@@ -6,9 +6,9 @@ $sql = "SELECT ConfigName, ShortTextValue FROM SiteConfig";
 
 if ($result = mysqli_query($link,$sql)) {
   while ($row = mysqli_fetch_array($result)) {
-    if ($row[0] == 'siteTitle') { echo $row[1]; }
+    echo $row[0];
+    $$row[0] = $row[1];
   }
-  echo $row;
 }
  ?>
 
@@ -23,7 +23,7 @@ if ($result = mysqli_query($link,$sql)) {
   </head>
   <body>
     <header class="title-bar">
-      <h1 class="title-text">TITLE PLACEHOLDER</h1>
+      <h1 class="title-text"><?= $siteTitle; ?></h1>
       <nav class="navbar">
         <ul class="nav-list">
           <li><a href="#about">PLACEHOLDER</a></li>
