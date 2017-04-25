@@ -14,7 +14,7 @@ if ($result = mysqli_query($link,$sql)) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SITENAME PLACEHOLDER</title>
+    <title><?= $siteTitle; ?></title>
     <link href="./css/main.css" rel="stylesheet">
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/6a531f5c2a.js"></script>
