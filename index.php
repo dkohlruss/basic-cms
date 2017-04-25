@@ -53,7 +53,7 @@ if ($result = mysqli_query($link,$sql)) {
         while ($row = mysqli_fetch_assoc($result)) {
           $contentname = explode(' ',trim($row['ContentTitle']));
           ?>
-          <div class="content" name="<?= $contentname; ?>">
+          <div class="content" name="<?= $contentname[0]; ?>">
             <h3><?= $row['ContentTitle']; ?></h3>
             <p><?= $row['Content']; ?></p>
           </div>
