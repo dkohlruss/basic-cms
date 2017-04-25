@@ -1,5 +1,5 @@
 <?php
-require('./php/SQLFunctions.php');
+require('./admin/SQLFunctions.php');
 
 $link = connectDB();
 $sql = "SELECT ConfigName, ShortTextValue FROM SiteConfig";
