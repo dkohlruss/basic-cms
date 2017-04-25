@@ -25,11 +25,16 @@ if ($result = mysqli_query($link,$sql)) {
       <h1 class="title-text"><?= $siteTitle; ?></h1>
       <nav class="navbar">
         <ul class="nav-list">
-          <li><a href="#about">PLACEHOLDER</a></li>
-          <li><a href="#concerts">PLACEHOLDER</a></li>
-          <li><a href="#members">PLACEHOLDER</a></li>
-          <li><a href="#audition">PLACEHOLDER</a></li>
-          <li><a href="mailto:dkohlruss@gmail.com">PLACEHOLDER</a></li>
+          <?php
+          $sql = "SELECT Nav_Title FROM Content ORDER BY Display_Order DESC";
+          if ($result = mysqli_query($link,$sql)) {
+            while ($row = mysqli_fetch_assoc($result)) {
+              ?>
+              <li><a href="#<?= $row['Nav_Title']; ?>"><?= $row['Nav_Title']; ?></a></li>
+              <?php
+            }
+          }
+           ?>
         </ul>
       </nav>
     </header>
@@ -43,7 +48,7 @@ if ($result = mysqli_query($link,$sql)) {
       if ($result = mysqli_query($link,$sql)) {
         while ($row = mysqli_fetch_assoc($result)) {
           ?>
-          <div class="content">
+          <div class="content" name="<?= $row['ContentTitle']; ?>">
             <h3><?= $row['ContentTitle']; ?></h3>
             <p><?= $row['Content']; ?></p>
           </div>
