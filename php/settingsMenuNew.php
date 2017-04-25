@@ -4,8 +4,8 @@ require('SQLFunctions.php');
 require('session.php');
 session_start();
 
-$name = $_POST['ConfigName'];
-$value = $_POST['ShortTextValue'];
+$name = addslashes($_POST['ConfigName']);
+$value = addslashes($_POST['ShortTextValue']);
 
 try {
   $link = connectDB();

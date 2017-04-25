@@ -4,8 +4,8 @@ require('SQLFunctions.php');
 require('session.php');
 session_start();
 
-$title = $_POST['ContentTitle'];
-$content = $_POST['Content'];
+$title = addslashes($_POST['ContentTitle']);
+$content = addslashes($_POST['Content']);
 
 try {
   $link = connectDB();
