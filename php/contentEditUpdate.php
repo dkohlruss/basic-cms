@@ -10,10 +10,10 @@ $id = $_POST['Content_ID'];
 
 try {
   $link = connectDB();
-  $sql = "UPDATE Content SET (ContentTitle = '" . $title . "', Content = '" . $content . "') WHERE Content_ID = " . $id . ";";
+  $sql = "UPDATE Content SET ContentTitle = '" . $title . "', Content = '" . $content . "' WHERE Content_ID = " . $id . ";";
 
   if (mysqli_query($link,$sql)) {
-    $navsql = "UPDATE Nav SET (Nav_Title = '" . $title . "') WHERE Nav_ID = " . $id . ";";
+    $navsql = "UPDATE Nav SET Nav_Title = '" . $title . "' WHERE Nav_ID = " . $id . ";";
     if (mysql_query($link, $navsql)) {
       $message = "Entry successfully updated";
     } else {
