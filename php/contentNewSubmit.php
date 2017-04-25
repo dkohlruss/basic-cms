@@ -32,7 +32,7 @@ try {
       while ($row = mysqli_fetch_assoc($result)) {
         $navid = $row['Nav_ID'];
       }
-      $contentsql = "INSERT INTO Content (Content_ID, Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $navid . "','" . $title . "','" . $content . "');";
+      $contentsql = "INSERT INTO Content (Content_ID, Nav_ID, ContentTitle, Content, Display_Order) VALUES ('" . $navid . "','" . $navid . "','" . $title . "','" . $content . "','" . $order . "');";
       if (mysqli_query($link, $contentsql)) {
         $message = "New record successfully created!";
       } else {
