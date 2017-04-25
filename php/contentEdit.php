@@ -5,6 +5,7 @@ require('SQLFunctions.php');
 session_start();
 
 $id = $_POST['Nav_ID'];
+$displayorder = $_POST['Display_Order'];
 
 ?>
 <!DOCTYPE html>
@@ -26,6 +27,7 @@ $id = $_POST['Nav_ID'];
             ?>
             <form action="contentEditUpdate.php" method="POST">
               <input type="hidden" name="Content_ID" value="<?= $id; ?>" />
+              <input type="text" name="Display_Order" value="<?= $displayorder; ?>" />
               <input type="text" name="ContentTitle" value="<?= $row['ContentTitle'] ?>" />
               <input type="text" name="Content" value="<?= $row['Content'] ?>" />
               <input type="submit" value="Update" />

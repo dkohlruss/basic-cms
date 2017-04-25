@@ -7,13 +7,14 @@ session_start();
 $title = $_POST['ContentTitle'];
 $content = $_POST['Content'];
 $id = $_POST['Content_ID'];
+$order = $_POST['Display_Order'];
 
 try {
   $link = connectDB();
   $sql = "UPDATE Content SET ContentTitle = '" . $title . "', Content = '" . $content . "' WHERE Content_ID = " . $id . ";";
 
   if (mysqli_query($link,$sql)) {
-    $navsql = "UPDATE Nav SET Nav_Title = '" . $title . "' WHERE Nav_ID = " . $id . ";";
+    $navsql = "UPDATE Nav SET Nav_Title = '" . $title . "', Display_Order = '" . $order . "' WHERE Nav_ID = " . $id . ";";
     if (mysqli_query($link, $navsql)) {
       $message = "Entry successfully updated";
     } else {
@@ -29,4 +30,5 @@ try {
 $_SESSION['message'] = $message;
 header('Location: ./contentMenu.php');
 mysqli_close($link);
- ?>
+
+?>
