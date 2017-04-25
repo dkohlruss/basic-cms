@@ -11,7 +11,7 @@ $order = $_POST['Display_Order'];
 
 try {
   $link = connectDB();
-  $sql = "UPDATE Content SET ContentTitle = '" . $title . "', Content = '" . $content . "' WHERE Content_ID = " . $id . ";";
+  $sql = "UPDATE Content SET ContentTitle = '" . $title . "', Content = '" . $content . "', Display_Order = '" . $order . "' WHERE Content_ID = " . $id . ";";
 
   if (mysqli_query($link,$sql)) {
     $navsql = "UPDATE Nav SET Nav_Title = '" . $title . "', Display_Order = '" . $order . "' WHERE Nav_ID = " . $id . ";";
