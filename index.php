@@ -30,6 +30,7 @@ if ($result = mysqli_query($link,$sql)) {
           if ($result = mysqli_query($link,$sql)) {
             $i = 0;
             while ($row = mysqli_fetch_assoc($result) && i < 6) {
+              echo $row;
               $arr = explode(' ',trim($row['Nav_Title']));
               ?>
               <li><a href="#<?= $arr[0]; ?>"><?= $row['Nav_Title']; ?></a></li>
