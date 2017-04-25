@@ -33,15 +33,15 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
                 <td class="config_name"><?= $row['Display_Order'] ?></td>
                 <td class="text_value"><?= $row['Nav_Title'] ?></td>
                 <td class="modify">
-                  <form action="contentEdit.php" method="POST" id="edit">
+                  <form action="contentEdit.php" method="POST">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
                     <input type="hidden" name="Display_Order" value="<?= $row['Display_Order'] ?>" />
+                    <button type="submit" value="Submit">Edit</button>
                   </form>
-                  <form action="contentDelete.php" method="POST" id="delete">
+                  <form action="contentDelete.php" method="POST">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
+                    <button type="submit" value="Delete">Delete</button>
                   </form>
-                    <button type="submit" form="edit" value="Submit">Edit</button>
-                    <button type="submit" form="delete" value="Delete">Delete</button>
                 </td>
             </tr> <?php
           }
