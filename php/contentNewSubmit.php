@@ -44,5 +44,6 @@ try {
 
 $_SESSION['message'] = $message;
 header('Location: contentMenu.php');
+mysqli_close($link);
 
  ?>

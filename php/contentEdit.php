@@ -21,11 +21,8 @@ $id = $_POST['Nav_ID'];
       try {
         $link = connectDB();
         $sql = "SELECT * FROM Content WHERE Content_ID = '" . $id . "';";
-        echo "doing the thing...";
         if ($result = mysqli_query($link, $sql)) {
-          echo "if did a thing...";
           while ($row = mysqli_fetch_assoc($result)) {
-            echo "things being done...";
             ?>
             <form action="contentEditUpdate.php" method="POST">
               <input type="hidden" name="Content_ID" value="<?= $id; ?>" />

@@ -25,7 +25,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
             <form action="contentEdit.php" method="POST">
               <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
               <div><input type="text" name="Display_Order" value="<?= $row['Display_Order'] ?>" /></div>
-              <div><input type="text" name="Nav_Title" value="<?= $row['Nav_Title'] ?>" /></div>
+              <div><?= $row['Nav_Title'] ?></div>
               <input type="submit" value="Edit" />
             </form> <?php
           }
