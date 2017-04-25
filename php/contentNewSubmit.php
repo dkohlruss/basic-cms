@@ -31,9 +31,8 @@ try {
     if ($result = mysqli_query($link,$navsqlquery)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $navid = $row['Nav_ID'];
-        echo $navid;
       }
-      $contentsql = "INSERT INTO Content (Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $title . "','" . $content . "');";
+      $contentsql = "INSERT INTO Content (Content_ID, Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $navid . "','" . $title . "','" . $content . "');";
       if (mysqli_query($link, $contentsql)) {
         $message = "New record successfully created!";
       } else {
@@ -46,7 +45,7 @@ try {
 }
 
 $_SESSION['message'] = $message;
-//header('Location: contentMenu.php');
+header('Location: contentMenu.php');
 mysqli_close($link);
 
  ?>
