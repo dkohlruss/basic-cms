@@ -6,10 +6,11 @@ $sql = "SELECT ConfigName, ShortTextValue FROM SiteConfig";
 
 if ($result = mysqli_query($link,$sql)) {
   while ($row = mysqli_fetch_array($result)) {
-    echo $row[0];
-    ${$row[0]} = $row[1] ;
+    ${$row[0]} = $row[1]; // Sets all ConfigName variables
   }
 }
+
+mysqli_close($link);
  ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,6 @@ if ($result = mysqli_query($link,$sql)) {
         </ul>
       </nav>
     </header>
-    <div class="splash"></div>
     <div class="socials">
       <a href="#" target="_blank"><i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a>
       <a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
