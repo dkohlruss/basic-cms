@@ -29,7 +29,7 @@ if ($result = mysqli_query($link,$sql)) {
           $sql = "SELECT Nav_Title FROM Nav ORDER BY Display_Order DESC";
           if ($result = mysqli_query($link,$sql)) {
             while ($row = mysqli_fetch_assoc($result)) {
-              echo $row[0];
+              var_dump($row);
               ?>
               <li><a href="#<?= $row[0]; ?>"><?= $row[0]; ?></a></li>
               <?php
