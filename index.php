@@ -34,6 +34,8 @@ if ($result = mysqli_query($link,$sql)) {
               <li><a href="#<?= $row[0]; ?>"><?= $row[0]; ?></a></li>
               <?php
             }
+          } else {
+            echo mysqli_error($link);
           }
            ?>
         </ul>
