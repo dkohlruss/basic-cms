@@ -1,5 +1,4 @@
-<? php
-
+<?php
 require('session.php');
 require('SQLFunctions.php');
 session_start();
@@ -34,6 +33,6 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
         echo $e;
       }
  ?>
-      </div>
-    </body>
+    </div>
+  </body>
 </html>
