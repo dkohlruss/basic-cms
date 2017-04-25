@@ -2,4 +2,4 @@
 require('session.php');
 ?>
 
-<iframe src="../index.html"></iframe>
+<iframe src="../index.php" width="900" height="900"></iframe>
