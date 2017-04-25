@@ -28,7 +28,8 @@ if ($result = mysqli_query($link,$sql)) {
           <?php
           $sql = "SELECT Nav_Title FROM Nav ORDER BY Display_Order";
           if ($result = mysqli_query($link,$sql)) {
-            while ($row = mysqli_fetch_assoc($result)) {
+            $i = 0;
+            while ($row = mysqli_fetch_assoc($result) && i < 6) {
               $arr = explode(' ',trim($row['Nav_Title']));
               ?>
               <li><a href="#<?= $arr[0]; ?>"><?= $row['Nav_Title']; ?></a></li>
