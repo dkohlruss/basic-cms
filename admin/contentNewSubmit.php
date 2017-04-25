@@ -5,7 +5,13 @@ require('session.php');
 session_start();
 
 $title = addslashes($_POST['ContentTitle']);
-$content = nl2br(addslashes($_POST['Content']));
+$content = htmlspecialchars($_POST['Content']);
+
+echo $content;
+
+$othercontent = nl2br($content);
+
+echo $othercontent;
 
 try {
   $link = connectDB();
@@ -45,7 +51,7 @@ try {
 }
 
 $_SESSION['message'] = $message;
-header('Location: contentMenu.php');
+//header('Location: contentMenu.php');
 mysqli_close($link);
 
  ?>
