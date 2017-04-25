@@ -35,6 +35,10 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
                 <div class="text_value"><?= $row['Nav_Title'] ?></div>
                 <div class="modify"><input type="submit" value="Edit" /></div>
               </form>
+              <form action="contentDelete.php" method="POST">
+                <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
+                <input type="submit" value="Delete" />
+              </form>
             </div> <?php
           }
         }
