@@ -11,7 +11,7 @@
         } else {
             $_SESSION['timeout'] = time();
             echo "<div align='right'>";
-             echo "  <a href='AdminIndex.php'>Preview</a> | " ;
+             echo "  <a href='preview.php'>Preview</a> | " ;
              echo "  <a href='index.php'>Home</a> | ";
              echo "  <a href='logout.php'>Log Out</a> | ";
              echo "  <a href='signup.php'>Create User</a> | ";
