@@ -18,7 +18,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
     <div class="content">
       <span class="center_text"><a href="contentNew.php">Create new content</a></span>
 
-      <table class="config_entry">
+      <table>
         <tr class="config_entry">
           <td class="config_name">Order</td>
           <td class="text_value">Title</td>
