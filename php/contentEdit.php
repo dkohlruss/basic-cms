@@ -21,7 +21,7 @@ $id = $_SESSION['Nav_ID']
       try {
         $link = connectDB();
         $sql = "SELECT * FROM Content WHERE Content_ID = '" . $id . "';";
-
+        echo "doing the thing...";
         if ($result = mysqli_query($link, $sql)) {
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
@@ -33,6 +33,8 @@ $id = $_SESSION['Nav_ID']
             </form>
             <?php
           }
+        } else {
+          echo "There was problem" . mysql_error($link);
         }
       } catch (Exception $e) {
         echo $e;
