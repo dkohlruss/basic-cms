@@ -4,7 +4,7 @@ require('session.php');
 require('SQLFunctions.php');
 session_start();
 
-$id = $_SESSION['Nav_ID'];
+$id = $_POST['Nav_ID'];
 
 ?>
 <!DOCTYPE html>
