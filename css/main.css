@@ -169,6 +169,7 @@ section {
 .config_name {
   display: inline-block;
   width: 150px;
+  min-width: 150px;
   height: 100%;
   border-right: 1px solid black;
   text-align: left;
@@ -176,7 +177,6 @@ section {
 
 .text_value {
   display: inline-block;
-  width: 500;
   height: 100%;
   border-right: 1px solid black;
   text-align: left;
@@ -184,7 +184,8 @@ section {
 
 .modify {
   display: inline-block;
-  max-width: 100px;
+  width: 100px;
+  min-width: 100px;
   height: 100%;
   text-align: left;
 }
