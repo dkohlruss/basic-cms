@@ -5,7 +5,7 @@ require('session.php');
 session_start();
 
 $title = $_POST['ContentTitle'];
-$content = nl2br(htmlspecialchars($_POST['Content']));
+$content = nl2br(addslashes($_POST['Content']));
 $id = $_POST['Content_ID'];
 $order = $_POST['Display_Order'];
 
