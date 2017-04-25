@@ -191,12 +191,16 @@ section {
   text-align: left;
 }
 
-form {
+.btn-parent form {
   display: inline;
 }
 
+.btn-parent button {
+  display: inline;
+  vertical-align: middle;
+}
+
 .btn {
-  display: inline-block;
   margin: 5px;
 }
 
