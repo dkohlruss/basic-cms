@@ -50,8 +50,9 @@ if ($result = mysqli_query($link,$sql)) {
       $sql = "SELECT ContentTitle, Content FROM Content ORDER BY Display_Order DESC";
       if ($result = mysqli_query($link,$sql)) {
         while ($row = mysqli_fetch_assoc($result)) {
+          $contentname = explode(' ',trim($row['ContentTitle']));
           ?>
-          <div class="content" name="<?= $row['ContentTitle']; ?>">
+          <div class="content" name="<?= $contentname; ?>">
             <h3><?= $row['ContentTitle']; ?></h3>
             <p><?= $row['Content']; ?></p>
           </div>
