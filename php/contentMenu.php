@@ -16,6 +16,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
   <body>
     <h1>Site Configuration</h1>
     <div class="content">
+      <a href="contentNew.php">Create new content</a>
         <?php
         try {
           if ($result = mysqli_query($link, $sql)) {

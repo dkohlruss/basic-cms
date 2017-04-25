@@ -16,7 +16,6 @@ $id = $_SESSION['Nav_ID']
   <body>
     <h1>Site Configuration</h1>
     <div class="content">
-      <a href="contentNew.php">Create new content</a>
 
       <?php
       try {
