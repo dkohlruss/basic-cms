@@ -9,7 +9,7 @@ $content = $_POST['Content'];
 
 try {
   $link = connectDB();
-  $sql = "SELECT 1 FROM Nav ORDER BY Display_Order DESC;";
+  $sql = "SELECT * FROM Nav ORDER BY Display_Order DESC LIMIT 1;";
 
   if ($result = mysqli_query($link,$sql)) {
     if (mysqli_num_rows($result) < 1) {
