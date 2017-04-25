@@ -21,6 +21,7 @@ if ($result = mysqli_query($link,$sql)) {
     <script src="./js/index.js" async></script>
   </head>
   <body>
+    <a href="./admin">Admin Login</a>
     <header class="content">
       <h1 class="title-text"><?= $siteTitle; ?></h1>
       <nav class="navbar">

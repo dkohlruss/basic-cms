@@ -46,7 +46,6 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
             <input type="text" name="ConfigName" />
             <input type="text" name="ShortTextValue" />
             <input type="submit" value="Create" />
-
         </form>
     </div>
   </body>
