@@ -1,6 +1,5 @@
 <?php
-
 require('session.php');
-require('../index.php');
-
 ?>
+
+<iframe src="../index.html"></iframe>
