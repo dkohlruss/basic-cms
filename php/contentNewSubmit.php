@@ -9,7 +9,7 @@ $content = $_POST['Content'];
 
 try {
   $link = connectDB();
-  $sql = "SELECT 1 FROM Nav ORDER BY Display_Order;";
+  $sql = "SELECT 1 FROM Nav ORDER BY Display_Order DESC;";
 
   if ($result = mysqli_query($link,$sql)) {
     if (mysqli_num_rows($result) < 1) {
@@ -19,10 +19,34 @@ try {
         $order = $row['Display_Order'] + 1;
       }
     }
-    echo $order;
   }
 } catch (Exception $e) {
   $message = $e;
 }
+
+try {
+    $navsqlinsert = "INSERT INTO Nav (Nav_Title, Display_Order) VALUES ('" . $title . "','" . $order . "');";
+    if (mysqli_query($link,$navsqlinsert)) {
+      $navsqlquery = "SELECT 1 FROM Nav ORDER BY Nav_ID DESC;";
+      if ($result = mysqli_query($link,$navsqlquery)) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $navid = $row['Nav_ID'];
+        }
+        $contentsql = "INSERT INTO Content (Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $title . "','" . $content . "');";
+        if (mysqli_query($link, $contentsql)) {
+          $message = "New record successfully created!";
+        }
+      }
+    }
+
+
+
+    $contentsql = "INSERT INTO Content (Nav_ID)"
+} catch (Exception $e) {
+  $message = $e;
+}
+
+$_SESSION['message'] = $message;
+header('Location: contentMenu.php');
 
  ?>
