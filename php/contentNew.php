@@ -12,7 +12,7 @@ require('SQLFunctions.php');
   </head>
   <body>
     <div class="content">
-        <h3>Create New Content</h3>
+        <h3 class="center_text">Create New Content</h3>
         <form action="contentNewSubmit.php" method="POST">
             <input type="text" name="ContentTitle" />
             <input type="textarea" name="Content" />

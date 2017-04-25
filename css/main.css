@@ -189,6 +189,10 @@ section {
   text-align: left;
 }
 
+.center_text {
+  text-align: center;
+}
+
 @media screen and (max-width: 990px) {
   .title-text {
     text-align: center;

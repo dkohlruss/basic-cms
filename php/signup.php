@@ -5,7 +5,7 @@
         <link href="../css/main.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Add New User</h1>
+        <h1 class="center_text">Add New User</h1>
         <fieldset>
             <form action="signupSubmit.php" method="POST">
             <p>

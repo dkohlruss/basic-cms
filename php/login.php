@@ -13,7 +13,7 @@ if (isset($_SESSION['message'])) {
     <link href="../css/main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Simple CMS</h1>
+    <h1 class="center_text">Simple CMS</h1>
     <div class="content">
         <fieldset>
             <form action="loginSubmit.php" method="POST">

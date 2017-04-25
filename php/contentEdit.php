@@ -15,7 +15,7 @@ $displayorder = $_POST['Display_Order'];
     <link href="../css/main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Site Configuration</h1>
+    <h1 class="center_text">Site Configuration</h1>
     <div class="content">
 
       <?php

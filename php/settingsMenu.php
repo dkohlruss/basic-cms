@@ -15,7 +15,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
     <link href="../css/main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Site Configuration</h1>
+    <h1 class="center_text">Site Configuration</h1>
     <div class="content">
       <div class="config_entry">
         <div class="config_name">Name</div>

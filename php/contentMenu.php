@@ -14,7 +14,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
     <link href="../css/main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Site Configuration</h1>
+    <h1 class="center_text">Site Configuration</h1>
     <div class="content">
       <a href="contentNew.php">Create new content</a>
         <?php
