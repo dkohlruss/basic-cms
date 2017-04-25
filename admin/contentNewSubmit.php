@@ -5,7 +5,7 @@ require('session.php');
 session_start();
 
 $title = addslashes($_POST['ContentTitle']);
-$content = addslashes($_POST['Content']);
+$content = nl2br(addslashes($_POST['Content']));
 
 try {
   $link = connectDB();
