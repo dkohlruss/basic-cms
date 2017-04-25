@@ -36,7 +36,7 @@ try {
       if (mysqli_query($link, $contentsql)) {
         $message = "New record successfully created!";
       } else {
-        $message = "Problem creating record: " . $mysqli_error($link);
+        $message = "Problem creating record: " . mysqli_error($link);
       }
     }
   }
