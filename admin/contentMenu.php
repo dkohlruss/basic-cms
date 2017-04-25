@@ -19,7 +19,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
       <span class="center_text"><a href="contentNew.php">Create new content</a></span>
 
       <table class="config_entry">
-        <tr>
+        <tr class="config_entry">
           <td class="config_name">Order</td>
           <td class="text_value">Title</td>
           <td class="modify">Modify</td>
@@ -29,19 +29,19 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
           if ($result = mysqli_query($link, $sql)) {
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
-            <tr>
+            <tr class="config_entry">
                 <td class="config_name"><?= $row['Display_Order'] ?></td>
                 <td class="text_value"><?= $row['Nav_Title'] ?></td>
                 <td class="modify">
-                  <form action="contentEdit.php" method="POST">
+                  <form action="contentEdit.php" method="POST" name="edit">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
                     <input type="hidden" name="Display_Order" value="<?= $row['Display_Order'] ?>" />
-                    <input type="submit" value="Edit" class="btn" />
                   </form>
                   <form action="contentDelete.php" method="POST">
                     <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
-                    <input type="submit" value="Delete" class="btn" />
                   </form>
+                    <button type="submit" form="edit" value="Submit">Edit</button>
+                    <button type="submit" form="delete" value="Delete">Delete</button>
                 </td>
             </tr> <?php
           }
