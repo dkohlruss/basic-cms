@@ -192,7 +192,7 @@ section {
 }
 
 form {
-  display: inline-block;
+  display: inline;
 }
 
 .btn {
