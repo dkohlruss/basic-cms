@@ -19,7 +19,7 @@
              echo "  <a href='settingsMenu.php'>Site Config Menu</a>";
              echo "</div>";
              if (isset($_SESSION['message'])) {
-                 echo "<h3>" . $_SESSION['message'] . "</h3>";
+                 echo "<h3 class=\"center_text\">" . $_SESSION['message'] . "</h3>";
                  unset($_SESSION['message']);
              }
         }
