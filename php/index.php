@@ -13,7 +13,7 @@ require('session.php');
     <h1>Simple CMS</h1>
     <div class="row">
         <div class="content"><a href="./settingsMenu.php">Settings</a></div>
-        <div class="content"><a href="#">Content</a></div>
+        <div class="content"><a href="./contentMenu.php">Content</a></div>
     </div>
   </body>
 </html>
