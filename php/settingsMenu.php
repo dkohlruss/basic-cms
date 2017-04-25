@@ -31,7 +31,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
                             <input type='hidden' name='q' value="<?= $row['SiteConfig_ID']; ?>" />
                             <div class="config_name"><?= $row['ConfigName']; ?></div>
                             <div class="text_value"><input type="text" name="ShortTextValue" value="<?= $row['ShortTextValue']; ?>" /></div>
-                            <div class="modify"><input type="submit" value="Edit" /></form> <br>
+                            <div class="modify"><input type="submit" value="Update" /></form> <br>
 
                             </div>
                     </div>

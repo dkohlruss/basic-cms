@@ -160,9 +160,10 @@ section {
 .config_entry {
   display: block;
   width: 700px;
-  height: 100px;
+  height: 50px;
   margin: auto 1px;
   border: 1px solid black;
+  text-align: center;
 }
 
 .config_name {
@@ -170,6 +171,7 @@ section {
   width: 150px;
   height: 100%;
   border-right: 1px solid black;
+  text-align: left;
 }
 
 .text_value {
@@ -177,12 +179,14 @@ section {
   width: 400px;
   height: 100%;
   border-right: 1px solid black;
+  text-align: left;
 }
 
 .modify {
   display: inline-block;
   width: 100px;
   height: 100%;
+  text-align: left;
 }
 
 @media screen and (max-width: 990px) {
