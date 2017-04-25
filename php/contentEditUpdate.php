@@ -17,10 +17,10 @@ try {
     if (mysql_query($link, $navsql)) {
       $message = "Entry successfully updated";
     } else {
-      $message = "Could not update Nav entry";
+      $message = mysqli_error($link);
     }
   } else {
-    $message = "Could not update Content entry";
+    $message = mysqli_error($link);
   }
 } catch (Exception $e) {
   $message = $e;
