@@ -157,6 +157,30 @@ section {
   margin-top: 0;
 }
 
+.config_entry {
+  display: block;
+  width: 500px;
+  margin: auto 1px;
+  border: 1px solid black;
+}
+
+.config_name {
+  display: inline-block;
+  width: 150px;
+  border-right: 1px solid black;
+}
+
+.text_value {
+  display: inline-block;
+  width: 300px;
+  border-right: 1px solid black;
+}
+
+.modify {
+  display: inline-block;
+  width: 50px;
+}
+
 @media screen and (max-width: 990px) {
   .title-text {
     text-align: center;

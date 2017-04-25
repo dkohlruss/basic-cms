@@ -17,6 +17,11 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
   <body>
     <h1>Site Configuration</h1>
     <div class="content">
+      <div class="config_entry">
+        <div class="config_name">Name</div>
+        <div class="text_value">Value</div>
+        <div class="modify">Modify</div>
+      </div>
         <?php
             if ($result = mysqli_query($link,$sql)) {
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -27,7 +32,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
                             <div class="config_name"><?= $row['ConfigName']; ?></div>
                             <div class="text_value"><input type="text" name="ShortTextValue" value="<?= $row['ShortTextValue']; ?>" /></div>
                             <div class="modify"><input type="submit" value="Edit" /></form> <br>
-            
+
                             </div>
                     </div>
                     <?php
