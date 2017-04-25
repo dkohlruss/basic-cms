@@ -1,3 +1,19 @@
+<?php
+
+require('SQLFunctions.php');
+
+$link = connectDB();
+$sql = "SELECT ConfigName, ShortTextValue FROM SiteConfig";
+
+if ($result = mysqli_query($link,$sql)) {
+  while ($row = mysqli_fetch_array($result)) {
+    if ($row[0] == 'siteTitle') { echo $row[1]; }
+  }
+
+  echo $row;
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
