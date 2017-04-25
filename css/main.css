@@ -186,9 +186,14 @@ section {
 .modify {
   display: inline-block;
   width: 150px;
-  min-width: 100px;
+  min-width: 125px;
   height: 100%;
   text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px;
 }
 
 .center_text {
