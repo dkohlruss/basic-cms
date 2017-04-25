@@ -30,6 +30,7 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
             <div class="config_entry">
               <form action="contentEdit.php" method="POST">
                 <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
+                <input type="hidden" name="Display_Order" value="<?= $row['Display_Order'] ?>" />
                 <div class="config_name"><?= $row['Display_Order'] ?></div>
                 <div class="text_value"><?= $row['Nav_Title'] ?></div>
                 <div class="modify"><input type="submit" value="Edit" /></div>
