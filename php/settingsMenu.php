@@ -40,7 +40,7 @@ $sql = "SELECT SiteConfig_ID, ConfigName, ShortTextValue FROM SiteConfig";
             }
         ?>
     </div>
-    <div class="content">
+    <div class="config_entry">
         <h3>Create New Param</h3>
         <form action="settingsMenuNew.php" method="POST">
             <input type="text" name="ConfigName" />
