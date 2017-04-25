@@ -31,6 +31,7 @@ try {
     if ($result = mysqli_query($link,$navsqlquery)) {
       while ($row = mysqli_fetch_assoc($result)) {
         $navid = $row['Nav_ID'];
+        echo $navid;
       }
       $contentsql = "INSERT INTO Content (Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $title . "','" . $content . "');";
       if (mysqli_query($link, $contentsql)) {
