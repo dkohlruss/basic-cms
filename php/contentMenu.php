@@ -27,12 +27,14 @@ $sql = "SELECT Nav_ID, Nav_Title, Display_Order FROM Nav ORDER BY Display_Order,
           if ($result = mysqli_query($link, $sql)) {
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
-            <form action="contentEdit.php" method="POST">
-              <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
-              <div class="config_name"><?= $row['Display_Order'] ?></div>
-              <div class="text_value"><?= $row['Nav_Title'] ?></div>
-              <div class="modify"><input type="submit" value="Edit" /></div>
-            </form> <?php
+            <div class="config_entry">
+              <form action="contentEdit.php" method="POST">
+                <input type="hidden" name="Nav_ID" value="<?= $row['Nav_ID']; ?>" />
+                <div class="config_name"><?= $row['Display_Order'] ?></div>
+                <div class="text_value"><?= $row['Nav_Title'] ?></div>
+                <div class="modify"><input type="submit" value="Edit" /></div>
+              </form>
+            </div> <?php
           }
         }
       } catch (Exception $e) {
