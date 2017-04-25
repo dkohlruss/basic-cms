@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 html body {
   margin: 0;
@@ -8,7 +8,7 @@ html body {
 
   color: #12121A;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 a {
