@@ -35,6 +35,8 @@ try {
       $contentsql = "INSERT INTO Content (Nav_ID, ContentTitle, Content) VALUES ('" . $navid . "','" . $title . "','" . $content . "');";
       if (mysqli_query($link, $contentsql)) {
         $message = "New record successfully created!";
+      } else {
+        $message = "Problem creating record";
       }
     }
   }

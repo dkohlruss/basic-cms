@@ -38,15 +38,6 @@ section {
   display: block;
 }
 
-.container {
-  width: 70%;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  position: relative;
-}
-
 .splash {
   float: clear;
 
